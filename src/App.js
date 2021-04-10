@@ -9,7 +9,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App container">
       <Switch>
         <Route exact path={"/"} component={LandingRoute} />
         <Route exact path={"/home"} component={HomeRoute} />
