@@ -5,6 +5,7 @@ import HomeRoute from "./routes/HomeRoute";
 import LandingRoute from "./routes/LandingRoute";
 import UpdateRoute from "./routes/UpdateRoute";
 import NotFoundRoute from "./routes/NotFoundRoute";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
