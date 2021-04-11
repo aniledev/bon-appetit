@@ -1,12 +1,16 @@
 import React, { useState, createContext } from "react";
 
 export const Context = createContext();
+
 export const ContextProvider = (props) => {
   const [restaurants, setRestaurants] = useState([]);
+  const addRestaurant = (restaurant) => {
+    setRestaurants([...restaurant, restaurant]);
+  };
   return (
     // the context provider needs to hold the value of restaurants from the api
     // setRestaurants is a function that updates the state with the restaurant response data
-    <Context.Provider value={{ restaurants, setRestaurants }}>
+    <Context.Provider value={{ restaurants, setRestaurants, addRestaurant }}>
       {props.children}
     </Context.Provider>
   );
