@@ -15,6 +15,7 @@ const UpdateForm = () => {
             type="text"
             id="name"
             placeholder="Name"
+            required
           />
         </div>
         <div className="form-group">
@@ -24,15 +25,17 @@ const UpdateForm = () => {
             type="text"
             id="location"
             placeholder="Location"
+            required
           />
         </div>
         <div className="form-group">
           <label htmlFor="price-range">Price Range</label>
           <input
             className="form-control"
-            type="text"
+            type="number"
             id="price_range"
             placeholder="Price Range"
+            required
           />
         </div>
       </form>
