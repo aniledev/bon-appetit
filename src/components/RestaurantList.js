@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import RestaurantRequest from "../axios/RestaurantRequest";
 import { Context } from "../context";
 
@@ -7,6 +8,10 @@ import { Context } from "../context";
 const RestaurantList = (props) => {
   // save the response from the fetch Data function to context
   const { restaurants, setRestaurants } = useContext(Context);
+
+  // use the history object to create rerouting
+  let history = useHistory();
+
   // use effect runs when the component mounts
   useEffect(() => {
     const fetchData = async () => {
@@ -37,6 +42,24 @@ const RestaurantList = (props) => {
     }
   };
 
+  const handleUpdate = async (id) => {
+    // reroute to restaurants/id/update page using history object
+    history.push(`/restaurants/${id}/update`);
+    // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
+    // try {
+    //   await RestaurantRequest.delete(`/restaurant/${id}`);
+    //   // console.log(response);
+    //   // instead of spread operator use filter method to update the restaurant state with the id of the one that was deleted
+    //   setRestaurants(
+    //     restaurants.filter((restaurant) => {
+    //       return restaurant.id !== id;
+    //     })
+    //   );
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  };
+
   return (
     <div className="RestaurantList list-group">
       <table className="table table-hover table-light">
@@ -60,7 +83,10 @@ const RestaurantList = (props) => {
                   <td>{"$".repeat(restaurant.price_range)}</td>
                   <td>Reviews</td>
                   <td>
-                    <button className="btn btn-warning update-button">
+                    <button
+                      className="btn btn-warning update-button"
+                      onClick={() => handleUpdate(restaurant.id)}
+                    >
                       Update
                     </button>
                   </td>
