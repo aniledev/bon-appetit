@@ -45,7 +45,7 @@ const UpdateForm = () => {
     // make PUT request to the server using the data that is entered into the form
     // /api/restaurant/:id
     try {
-      const response = await RestaurantRequest.put(`/restaurant/${id}`, {
+      await RestaurantRequest.put(`/restaurant/${id}`, {
         name,
         location,
         price_range: priceRange,
