@@ -1,7 +1,14 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import "../styles/LandingRoute.css";
 
 export const LandingRoute = () => {
+  const history = useHistory();
+
+  const handleWelcomeButton = () => {
+    history.push("/restaurants");
+  };
 
   return (
     <div className="LandingRoute">
