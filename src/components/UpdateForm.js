@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 
 const UpdateForm = () => {
   // use params in order to route the page to the update form for a specific restaurant
   const { id } = useParams();
   console.log(id);
+
+  // create controlled form component using state
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
+  const [priceRange, setPriceRange] = useState("");
+
   return (
     <div className="UpdateForm mt-4">
       <form className="update-form">
@@ -15,6 +21,8 @@ const UpdateForm = () => {
             type="text"
             id="name"
             placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             required
           />
         </div>
@@ -25,6 +33,8 @@ const UpdateForm = () => {
             type="text"
             id="location"
             placeholder="Location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
             required
           />
         </div>
@@ -37,6 +47,8 @@ const UpdateForm = () => {
             min="1"
             max="5"
             placeholder="Price Range"
+            value={priceRange}
+            onChange={(e) => setPriceRange(e.target.value)}
             required
           />
         </div>
