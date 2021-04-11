@@ -1,7 +1,7 @@
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import RestaurantDetailRoute from "./routes/RestaurantDetailRoute";
-import HomeRoute from "./routes/HomeRoute";
+import ListRoute from "./routes/ListRoute";
 import LandingRoute from "./routes/LandingRoute";
 import UpdateRoute from "./routes/UpdateRoute";
 import NotFoundRoute from "./routes/NotFoundRoute";
@@ -15,7 +15,7 @@ function App() {
       <div className="App container">
         <Switch>
           <Route exact path={"/"} component={LandingRoute} />
-          <Route exact path={"/restaurants"} component={HomeRoute} />
+          <Route exact path={"/restaurants"} component={ListRoute} />
           <Route
             exact
             path={"/restaurants/:id"}

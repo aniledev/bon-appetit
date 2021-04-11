@@ -4,10 +4,10 @@ import AddRestaurantForm from "../components/AddRestaurantForm";
 import RestaurantList from "../components/RestaurantList";
 import "../styles/AddRestaurantForm.css";
 
-export default class HomeRoute extends Component {
+export default class ListRoute extends Component {
   render() {
     return (
-      <div>
+      <div className="ListRoute">
         <HomeHeader />
         <AddRestaurantForm />
         <RestaurantList />
