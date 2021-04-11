@@ -9,6 +9,21 @@ const RestaurantInfo = () => {
   // wrap in a try catch bloc
   // make a get request to /api/restaurant/:id
   // save this repsonse to the state
+  const { id } = useParams();
+  const { selectedRestaurant, setSelectedRestaurant } = useContext(Context);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await RestaurantRequest.get(`/restaurant/${id}`);
+        console.log(response.data.data.restaurant);
+        setSelectedRestaurant(response.data.data.restaurant);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [id, setSelectedRestaurant]);
 
   return <div className="Restaurant">Restaurant Info Page</div>;
 };
