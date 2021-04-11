@@ -26,7 +26,8 @@ const RestaurantList = (props) => {
     fetchData();
   }, [setRestaurants]);
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (e, id) => {
+    e.stopPropagation();
     // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
     try {
       await RestaurantRequest.delete(`/restaurant/${id}`);
@@ -42,7 +43,8 @@ const RestaurantList = (props) => {
     }
   };
 
-  const handleUpdate = async (id) => {
+  const handleUpdate = async (e, id) => {
+    e.stopPropagation();
     // reroute to restaurants/id/update page using history object
     history.push(`/restaurants/${id}/update`);
     // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
@@ -93,7 +95,7 @@ const RestaurantList = (props) => {
                   <td>
                     <button
                       className="btn btn-warning update-button"
-                      onClick={() => handleUpdate(restaurant.id)}
+                      onClick={(e) => handleUpdate(e, restaurant.id)}
                     >
                       Update
                     </button>
@@ -101,7 +103,7 @@ const RestaurantList = (props) => {
                   <td>
                     <button
                       className="btn btn-danger delete-button"
-                      onClick={() => handleDelete(restaurant.id)}
+                      onClick={(e) => handleDelete(e, restaurant.id)}
                     >
                       Delete
                     </button>
