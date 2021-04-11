@@ -91,7 +91,7 @@ const RestaurantList = (props) => {
                   <td>{restaurant.name}</td>
                   <td>{restaurant.location}</td>
                   <td>{"$".repeat(restaurant.price_range)}</td>
-                  <td>Reviews</td>
+                  <td>{restaurant.average_rating}</td>
                   <td>
                     <button
                       className="btn btn-warning update-button"
