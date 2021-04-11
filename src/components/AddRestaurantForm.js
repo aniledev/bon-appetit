@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import RestaurantRequest from "../axios/RestaurantRequest";
+import { Context } from "../context";
 
 const AddRestaurantForm = () => {
+  const { addRestaurant } = useContext(Context);
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [priceRange, setPriceRange] = useState("Price Range");
@@ -19,7 +21,8 @@ const AddRestaurantForm = () => {
         location,
         price_range: priceRange,
       });
-      console.log(response);
+      addRestaurant(response.data.data.restaurant);
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -67,7 +70,7 @@ const AddRestaurantForm = () => {
             >
               <option disabled>Price Range</option>
               <option value="1">$</option>
-              <option value="3">$$</option>
+              <option value="2">$$</option>
               <option value="3">$$$</option>
               <option value="4">$$$$</option>
               <option value="5">$$$$$</option>
