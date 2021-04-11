@@ -18,14 +18,11 @@ export const AddReviewForm = () => {
     console.log("form submitted");
     // make request to teh endpoint api/restaurant/:id/review
     try {
-      const response = await RestaurantRequest.post(
-        `/restaurant/${id}/review`,
-        {
-          name,
-          review,
-          rating,
-        }
-      );
+      await RestaurantRequest.post(`/restaurant/${id}/review`, {
+        name,
+        review,
+        rating,
+      });
       history.push("/");
       history.push(location.pathname);
       // console.log(response.data.data.review);
