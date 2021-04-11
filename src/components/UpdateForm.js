@@ -1,15 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Context } from "../context";
+import RestaurantRequest from "../axios/RestaurantRequest";
 
 const UpdateForm = () => {
   // use params in order to route the page to the update form for a specific restaurant
   const { id } = useParams();
   console.log(id);
-
+  // use context to set the placeholder value of the individual restaurant we are updatin
+  const { restaurants } = useContext(Context);
   // create controlled form component using state
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [priceRange, setPriceRange] = useState("");
+
+  // fetch data again on the update form so that we can use the values to change placeholder text
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await RestaurantRequest.get(`/restaurant/${id}`);
+        console.log(response.data.data);
+        // setRestaurants(response.data.data.restaurants);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [id]);
 
   return (
     <div className="UpdateForm mt-4">
