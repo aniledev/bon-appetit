@@ -38,6 +38,9 @@ const UpdateForm = () => {
             required
           />
         </div>
+        <button type="submit" className="btn btn-info submit-update-restaurant">
+          Submit
+        </button>
       </form>
     </div>
   );
