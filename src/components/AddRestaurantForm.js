@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RestaurantRequest from "../axios/RestaurantRequest";
 
 const AddRestaurantForm = () => {
   const [name, setName] = useState("");
@@ -7,6 +8,9 @@ const AddRestaurantForm = () => {
 
   const handleSubmit = (e) => {
     console.log("clicked");
+    // prevent default action of form submission
+    // create try catch block for handling request to /restaurant
+    // in the POST body send data stored in state
   };
 
   return (
