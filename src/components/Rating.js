@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
+import "../styles/Rating.css";
 // import { star } from "@fortawesome/free-regular-svg-icons";
 
 const Rating = ({ rating }) => {
@@ -11,8 +12,12 @@ const Rating = ({ rating }) => {
   const starRating = [];
 
   for (let i = 1; i <= 5; i++) {
-    const filledStar = <FontAwesomeIcon icon={faStar} key={i} />;
-    const halfStar = <FontAwesomeIcon icon={faStarHalf} key={i} />;
+    const filledStar = (
+      <FontAwesomeIcon className="star-icon" icon={faStar} key={i} />
+    );
+    const halfStar = (
+      <FontAwesomeIcon className="star-icon" icon={faStarHalf} key={i} />
+    );
     if (i <= rating) {
       starRating.push(filledStar);
     } // use Math.ceil to round up regardless of the floating point number
