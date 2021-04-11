@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import { Switch, Route } from "react-router-dom";
 import RestaurantDetailRoute from "./routes/RestaurantDetailRoute";
 import ListRoute from "./routes/ListRoute";

@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 // import { UserProvider } from "./contexts/UserContext";
 import App from "./App";
 // import "./setup-icons";
-import "./index.css";
+import "./styles/index.css";
 // import * as serviceWorker from "./serviceWorker";
 import reportWebVitals from "./reportWebVitals";
 
