@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const AddReviewForm = () => {
+  const [name, setName] = useState("");
+  const [review, setReview] = useState("");
+  const [rating, setRating] = useState("");
+
   return (
     <div className="AddReviewForm mb-2">
       <form className="add-review-form">
