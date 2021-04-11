@@ -35,26 +35,27 @@ const RestaurantList = (props) => {
           </tr>
         </thead>
         <tbody>
-          {restaurants.map((restaurant) => {
-            return (
-              <tr>
-                <td>{restaurant.name}</td>
-                <td>{restaurant.location}</td>
-                <td>{"$".repeat(restaurant.price_range)}</td>
-                <td>Reviews</td>
-                <td>
-                  <button className="btn btn-warning update-button">
-                    Update
-                  </button>
-                </td>
-                <td>
-                  <button className="btn btn-danger delete-button">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
+          {restaurants &&
+            restaurants.map((restaurant) => {
+              return (
+                <tr key={restaurant.id}>
+                  <td>{restaurant.name}</td>
+                  <td>{restaurant.location}</td>
+                  <td>{"$".repeat(restaurant.price_range)}</td>
+                  <td>Reviews</td>
+                  <td>
+                    <button className="btn btn-warning update-button">
+                      Update
+                    </button>
+                  </td>
+                  <td>
+                    <button className="btn btn-danger delete-button">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
 
           {/* <tr>
             <td>Mellow Mushroom</td>

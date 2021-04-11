@@ -4,7 +4,7 @@ export default class AddRestaurantForm extends Component {
   render() {
     return (
       <div className="AddRestaurantForm mb-4">
-        <form className="add-restaurant-form">
+        <form className="add-restaurant-form mt-5">
           <div className="form-row">
             <div className="col">
               <label htmlFor="name" className="sr-only">
