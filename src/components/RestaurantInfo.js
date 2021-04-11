@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../context";
 import RestaurantRequest from "../axios/RestaurantRequest";
-import Rating from "./Rating";
+// import Rating from "./Rating";
 import Reviews from "./Reviews";
 import AddReviewForm from "./AddReviewForm";
 
