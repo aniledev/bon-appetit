@@ -29,7 +29,7 @@ const RestaurantInfo = () => {
 
   return (
     <div className="Restaurant">
-      {selectedRestaurant && <Rating rating={3} />}
+      {selectedRestaurant && <Rating rating={4.3} />}
     </div>
   );
 };
