@@ -19,7 +19,7 @@ const RestaurantList = (props) => {
       }
     };
     fetchData();
-  }, []);
+  }, [setRestaurants]);
 
   return (
     <div className="RestaurantList list-group">
