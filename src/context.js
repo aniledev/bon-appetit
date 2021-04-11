@@ -5,7 +5,7 @@ export const Context = createContext();
 export const ContextProvider = (props) => {
   const [restaurants, setRestaurants] = useState([]);
   const addRestaurant = (restaurant) => {
-    setRestaurants([...restaurant, restaurant]);
+    setRestaurants([...restaurants, restaurant]);
   };
   return (
     // the context provider needs to hold the value of restaurants from the api
