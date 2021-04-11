@@ -8,7 +8,7 @@ const UpdateForm = () => {
   const { id } = useParams();
   //   console.log(id);
   // use context to set the placeholder value of the individual restaurant we are updatin
-  const { restaurants } = useContext(Context);
+  useContext(Context);
   // create controlled form component using state
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
@@ -20,7 +20,7 @@ const UpdateForm = () => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get(`/restaurant/${id}`);
-        console.log(response.data.data);
+        // console.log(response.data.data);
         // use the response data to update the state, which in turn can update the placeholder text
         setName(response.data.data.restaurant.name);
         setLocation(response.data.data.restaurant.location);
