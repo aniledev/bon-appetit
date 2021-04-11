@@ -14,12 +14,19 @@ export const AddReviewForm = () => {
     e.preventDefault();
     console.log("form submitted");
     // make request to teh endpoint api/restaurant/:id/review
-    const response = await RestaurantRequest.post(`/restaurant/${id}/review`, {
-      name,
-      review,
-      rating,
-    });
-    console.log(response);
+    try {
+      const response = await RestaurantRequest.post(
+        `/restaurant/${id}/review`,
+        {
+          name,
+          review,
+          rating,
+        }
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
