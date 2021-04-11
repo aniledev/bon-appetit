@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Context } from "../context";
 import RestaurantRequest from "../axios/RestaurantRequest";
 import Rating from "./Rating";
+import Reviews from "./Reviews";
 
 const RestaurantInfo = () => {
   // destructure the params object
@@ -29,7 +30,13 @@ const RestaurantInfo = () => {
 
   return (
     <div className="Restaurant">
-      {selectedRestaurant && <Rating rating={4.3} />}
+      {selectedRestaurant && (
+        <>
+          <div className="mt-3">
+            <Reviews />
+          </div>
+        </>
+      )}
     </div>
   );
 };

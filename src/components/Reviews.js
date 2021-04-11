@@ -10,9 +10,9 @@ const Reviews = () => {
       >
         <div className="card-header d-flex justify-content-between">
           <span>Elina</span>
-          <spain>
+          <span>
             <Rating rating={3} />
-          </spain>
+          </span>
         </div>
         <div className="card-body">
           <p className="card-text">Some text here</p>
