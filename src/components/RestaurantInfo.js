@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Context } from "../context";
+import RestaurantRequest from "../axios/RestaurantRequest";
 
 const RestaurantInfo = () => {
   // destructure the params object
@@ -25,7 +26,11 @@ const RestaurantInfo = () => {
     fetchData();
   }, [id, setSelectedRestaurant]);
 
-  return <div className="Restaurant">Restaurant Info Page</div>;
+  return (
+    <div className="Restaurant">
+      {selectedRestaurant && selectedRestaurant.name}
+    </div>
+  );
 };
 
 export default RestaurantInfo;
