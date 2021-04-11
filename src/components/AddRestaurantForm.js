@@ -6,11 +6,23 @@ const AddRestaurantForm = () => {
   const [location, setLocation] = useState("");
   const [priceRange, setPriceRange] = useState("Price Range");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     console.log("clicked");
     // prevent default action of form submission
     // create try catch block for handling request to /restaurant
     // in the POST body send data stored in state
+
+    try {
+      const response = await RestaurantRequest.post("/restaurant", {
+        name,
+        location,
+        price_range: priceRange,
+      });
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
