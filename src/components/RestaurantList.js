@@ -60,6 +60,10 @@ const RestaurantList = (props) => {
     // }
   };
 
+  const handleSelectRestaurant = (id) => {
+    console.log("restaurant selected");
+  };
+
   return (
     <div className="RestaurantList list-group">
       <table className="table table-hover table-light">
@@ -77,7 +81,10 @@ const RestaurantList = (props) => {
           {restaurants &&
             restaurants.map((restaurant) => {
               return (
-                <tr key={restaurant.id}>
+                <tr
+                  key={restaurant.id}
+                  onClick={() => handleSelectRestaurant(restaurant.id)}
+                >
                   <td>{restaurant.name}</td>
                   <td>{restaurant.location}</td>
                   <td>{"$".repeat(restaurant.price_range)}</td>
