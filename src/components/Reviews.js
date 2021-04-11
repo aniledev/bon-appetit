@@ -1,10 +1,30 @@
 import React from "react";
 import Rating from "./Rating";
 
-const Reviews = () => {
+const Reviews = ({ reviews }) => {
   return (
     <div className="Reviews row row-cols-3 mb-2">
-      <div
+      {reviews &&
+        reviews.map((review) => {
+          return (
+            <div
+              className="card text-white bg-primary mb-3 mr-4"
+              style={{ maxWidth: "30%" }}
+              key={review.id}
+            >
+              <div className="card-header d-flex justify-content-between">
+                <span>{review.name}</span>
+                <span>
+                  <Rating rating={review.rating} />
+                </span>
+              </div>
+              <div className="card-body">
+                <p className="card-text">{review.review}</p>
+              </div>
+            </div>
+          );
+        })}
+      {/* <div
         className="card text-white bg-primary mb-3 mr-4"
         style={{ maxWidth: "30%" }}
       >
@@ -73,7 +93,7 @@ const Reviews = () => {
         <div className="card-body">
           <p className="card-text">Some text here</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
