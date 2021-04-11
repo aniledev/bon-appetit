@@ -17,7 +17,7 @@ const RestaurantInfo = () => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get(`/restaurant/${id}`);
-        console.log(response.data.data.restaurant);
+        // console.log(response.data.data.restaurant);
         setSelectedRestaurant(response.data.data.restaurant);
       } catch (error) {
         console.log(error);
