@@ -4,6 +4,7 @@ import { Context } from "../context";
 import RestaurantRequest from "../axios/RestaurantRequest";
 import Rating from "./Rating";
 import Reviews from "./Reviews";
+import AddReviewForm from "./AddReviewForm";
 
 const RestaurantInfo = () => {
   // destructure the params object
@@ -30,10 +31,12 @@ const RestaurantInfo = () => {
 
   return (
     <div className="Restaurant">
+      {selectedRestaurant && selectedRestaurant.name}
       {selectedRestaurant && (
         <>
           <div className="mt-3">
             <Reviews />
+            <AddReviewForm />
           </div>
         </>
       )}
