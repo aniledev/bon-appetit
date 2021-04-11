@@ -35,7 +35,7 @@ const RestaurantInfo = () => {
       {selectedRestaurant && (
         <>
           <div className="mt-3">
-            <Reviews />
+            <Reviews reviews={selectedRestaurant} />
             <AddReviewForm />
           </div>
         </>
