@@ -25,7 +25,13 @@ const RestaurantList = (props) => {
     // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
     try {
       const response = await RestaurantRequest.delete(`/restaurant/${id}`);
-      console.log(response);
+      // console.log(response);
+      // instead of spread operator use filter method to update the restaurant state with the id of the one that was deleted
+      setRestaurants(
+        restaurants.filter((restaurant) => {
+          return restaurant.id !== id;
+        })
+      );
     } catch (error) {
       console.log(error);
     }
