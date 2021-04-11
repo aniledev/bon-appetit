@@ -31,11 +31,11 @@ const RestaurantInfo = () => {
 
   return (
     <div className="Restaurant">
-      {selectedRestaurant && selectedRestaurant.restaurant.name}
+      {selectedRestaurant.restaurant && selectedRestaurant.restaurant.name}
       {selectedRestaurant && (
         <>
           <div className="mt-3">
-            <Reviews reviews={selectedRestaurant} />
+            <Reviews reviews={selectedRestaurant.reviews} />
             <AddReviewForm />
           </div>
         </>
