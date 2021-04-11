@@ -1,6 +1,11 @@
 import React, { Component } from "react";
+// import axios request config module
 
 export default class RestaurantList extends Component {
+  // use effect runs when the component mounts
+  // use async /await actions to make request to restaurant
+  // due to async actions wrap your code in a try catch block for error handling
+
   render() {
     return (
       <div className="RestaurantList list-group">
