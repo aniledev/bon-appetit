@@ -8,14 +8,18 @@ const RestaurantList = () => {
   // use async /await actions to make request to restaurant
   // due to async actions wrap your code in a try catch block for error handling
 
-  useEffect(async () => {
-    // save the response from the request to a variable for manipulation
-    try {
-      const response = await RestaurantRequest.get("/restaurant");
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
+  // save the response from the request to a variable for manipulation
+  // wrap text in fetchData function as adviced by console warning
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await RestaurantRequest.get("/restaurant");
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
   }, []);
 
   return (
