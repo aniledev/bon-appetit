@@ -41,7 +41,7 @@ export default class AddRestaurantForm extends Component {
                 <option value="5">$$$$$</option>
               </select>
             </div>
-            <button className="btn btn-danger add-restaurant-button">
+            <button className="btn btn-info add-restaurant-button">
               Add Restaurant
             </button>
           </div>

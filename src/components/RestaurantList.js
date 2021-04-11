@@ -48,7 +48,9 @@ const RestaurantList = (props) => {
                   </button>
                 </td>
                 <td>
-                  <button className="btn btn-info delete-button">Delete</button>
+                  <button className="btn btn-danger delete-button">
+                    Delete
+                  </button>
                 </td>
               </tr>
             );
