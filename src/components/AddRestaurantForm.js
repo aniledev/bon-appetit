@@ -13,7 +13,7 @@ export default class AddRestaurantForm extends Component {
               <input
                 type="text"
                 className="form-control"
-                placeholder="name"
+                placeholder="Name"
                 id="name"
               />
             </div>
@@ -25,7 +25,7 @@ export default class AddRestaurantForm extends Component {
                 type="text"
                 id="location"
                 className="form-control"
-                placeholder="location"
+                placeholder="Location"
               />
             </div>
             <div className="col">
