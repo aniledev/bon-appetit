@@ -32,11 +32,25 @@ const UpdateForm = () => {
     fetchData();
   }, [id]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     // prevent the default action
     e.preventDefault();
-    console.log("update butto clicked");
+    // console.log("update butto clicked");
+    // wrap code in try catch block
     // make PUT request to the server using the data that is entered into the form
+    // /api/restaurant/:id
+    try {
+      const response = await RestaurantRequest.put(`/restaurant/${id}`, {
+        name,
+        location,
+        price_range: priceRange,
+      });
+      console.log(response.data.data.restaurant);
+
+      //   addRestaurant(response.data.data.restaurant);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
