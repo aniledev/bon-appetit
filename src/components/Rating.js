@@ -7,9 +7,13 @@ const Rating = () => {
   // render the star array
   const starRating = [];
   for (let i = 1; i <= 5; i++) {
-    starRating.push(<i class="fas fa-star"></i>);
+    if (i <= rating) {
+      starRating.push(<i class="fas fa-star"></i>);
+    } else {
+      starRating.push(<i class="far fa-star"></i>);
+    }
   }
-  return <div className="Rating"></div>;
+  return <div className="Rating">{starRating}</div>;
 };
 
 export default Rating;
