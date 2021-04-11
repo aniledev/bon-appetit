@@ -12,7 +12,7 @@ const RestaurantList = (props) => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get("/restaurant");
-        console.log(response);
+        // console.log(response);
         setRestaurants(response.data.data.restaurants);
       } catch (error) {
         console.log(error);
