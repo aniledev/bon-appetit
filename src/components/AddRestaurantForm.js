@@ -43,6 +43,7 @@ const AddRestaurantForm = () => {
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
             />
           </div>
           <div className="col">
@@ -56,6 +57,7 @@ const AddRestaurantForm = () => {
               placeholder="Location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
+              required
             />
           </div>
           <div className="col">
@@ -67,6 +69,7 @@ const AddRestaurantForm = () => {
               className="custom-select my-1 mr-sm-2"
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
+              required
             >
               <option disabled>Price Range</option>
               <option value="1">$</option>
