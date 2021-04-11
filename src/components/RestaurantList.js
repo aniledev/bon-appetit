@@ -8,6 +8,16 @@ const RestaurantList = () => {
   // use async /await actions to make request to restaurant
   // due to async actions wrap your code in a try catch block for error handling
 
+  useEffect(async () => {
+    // save the response from the request to a variable for manipulation
+    try {
+      const response = await RestaurantRequest.get("/restaurant");
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
   return (
     <div className="RestaurantList list-group">
       <table className="table table-hover table-light">
