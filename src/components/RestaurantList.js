@@ -21,6 +21,16 @@ const RestaurantList = (props) => {
     fetchData();
   }, [setRestaurants]);
 
+  const handleDelete = async (id) => {
+    // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
+    try {
+      const response = await RestaurantRequest.delete(`/restaurant/${id}`);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="RestaurantList list-group">
       <table className="table table-hover table-light">
@@ -49,7 +59,10 @@ const RestaurantList = (props) => {
                     </button>
                   </td>
                   <td>
-                    <button className="btn btn-danger delete-button">
+                    <button
+                      className="btn btn-danger delete-button"
+                      onClick={() => handleDelete(restaurant.id)}
+                    >
                       Delete
                     </button>
                   </td>

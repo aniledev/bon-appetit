@@ -10,7 +10,7 @@ const AddRestaurantForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("clicked");
+    // console.log("clicked");
     // prevent default action of form submission
     // create try catch block for handling request to /restaurant
     // in the POST body send data stored in state
