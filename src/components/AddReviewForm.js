@@ -5,6 +5,12 @@ export const AddReviewForm = () => {
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("Rating");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("form submitted");
+    // make request to teh endpoint api/restaurant/:id/review
+  };
+
   return (
     <div className="AddReviewForm mb-2">
       <form className="add-review-form">
@@ -56,7 +62,13 @@ export const AddReviewForm = () => {
             required
           ></textarea>
         </div>
-        <button className="btn btn-info add-review-button">Submit</button>
+        <button
+          type="submit"
+          className="btn btn-info add-review-button"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
