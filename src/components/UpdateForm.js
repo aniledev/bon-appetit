@@ -34,6 +34,8 @@ const UpdateForm = () => {
             className="form-control"
             type="number"
             id="price_range"
+            min="1"
+            max="5"
             placeholder="Price Range"
             required
           />
