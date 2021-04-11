@@ -1,14 +1,25 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+
+import RestaurantRequest from "../axios/RestaurantRequest";
 
 export const AddReviewForm = () => {
+  const { id } = useParams();
+  console.log(id);
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("Rating");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("form submitted");
     // make request to teh endpoint api/restaurant/:id/review
+    const response = await RestaurantRequest.post(`/restaurant/${id}/review`, {
+      name,
+      review,
+      rating,
+    });
+    console.log(response);
   };
 
   return (
