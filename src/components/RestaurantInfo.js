@@ -31,7 +31,10 @@ const RestaurantInfo = () => {
 
   return (
     <div className="Restaurant">
-      {selectedRestaurant.restaurant && selectedRestaurant.restaurant.name}
+      <h1 className="text-center">
+        {selectedRestaurant.restaurant && selectedRestaurant.restaurant.name}
+      </h1>
+
       {selectedRestaurant && (
         <>
           <div className="mt-3">
