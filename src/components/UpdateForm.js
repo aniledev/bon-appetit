@@ -6,7 +6,7 @@ import RestaurantRequest from "../axios/RestaurantRequest";
 const UpdateForm = () => {
   // use params in order to route the page to the update form for a specific restaurant
   const { id } = useParams();
-  console.log(id);
+  //   console.log(id);
   // use context to set the placeholder value of the individual restaurant we are updatin
   const { restaurants } = useContext(Context);
   // create controlled form component using state
@@ -21,7 +21,10 @@ const UpdateForm = () => {
       try {
         const response = await RestaurantRequest.get(`/restaurant/${id}`);
         console.log(response.data.data);
-        // setRestaurants(response.data.data.restaurants);
+        // use the response data to update the state, which in turn can update the placeholder text
+        setName(response.data.data.restaurant.name);
+        setLocation(response.data.data.restaurant.location);
+        setPriceRange(response.data.data.restaurant.price_range);
       } catch (error) {
         console.log(error);
       }
