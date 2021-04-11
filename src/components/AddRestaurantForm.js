@@ -4,6 +4,11 @@ const AddRestaurantForm = () => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [priceRange, setPriceRange] = useState("Price Range");
+
+  const handleSubmit = (e) => {
+    console.log("clicked");
+  };
+
   return (
     <div className="AddRestaurantForm mb-4">
       <form className="add-restaurant-form mt-5">
@@ -52,7 +57,11 @@ const AddRestaurantForm = () => {
               <option value="5">$$$$$</option>
             </select>
           </div>
-          <button className="btn btn-info add-restaurant-button">
+          <button
+            type="submit"
+            className="btn btn-info add-restaurant-button"
+            onClick={handleSubmit}
+          >
             Add Restaurant
           </button>
         </div>
