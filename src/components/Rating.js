@@ -5,7 +5,10 @@ const Rating = () => {
   // loop through the rating passed in from props
   // if i <= rating then add a start to the star array
   // render the star array
-
+  const starRating = [];
+  for (let i = 1; i <= 5; i++) {
+    starRating.push(<i class="fas fa-star"></i>);
+  }
   return <div className="Rating"></div>;
 };
 
