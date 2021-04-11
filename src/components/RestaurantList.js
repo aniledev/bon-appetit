@@ -1,20 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import RestaurantRequest from "../axios/RestaurantRequest";
+import { Context } from "../context";
 
 // useEffeect doesnt wok with class components refractor into function component first
 
-const RestaurantList = () => {
+const RestaurantList = (props) => {
+  // save the response from the fetch Data function to context
+  const { restaurants, setRestaurants } = useContext(Context);
   // use effect runs when the component mounts
-  // use async /await actions to make request to restaurant
-  // due to async actions wrap your code in a try catch block for error handling
-
-  // save the response from the request to a variable for manipulation
-  // wrap text in fetchData function as adviced by console warning
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get("/restaurant");
         console.log(response);
+        setRestaurants(response.data.data.restaurants);
       } catch (error) {
         console.log(error);
       }
