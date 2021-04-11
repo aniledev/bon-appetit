@@ -32,6 +32,13 @@ const UpdateForm = () => {
     fetchData();
   }, [id]);
 
+  const handleSubmit = (e) => {
+    // prevent the default action
+    e.preventDefault();
+    console.log("update butto clicked");
+    // make PUT request to the server using the data that is entered into the form
+  };
+
   return (
     <div className="UpdateForm mt-4">
       <form className="update-form">
@@ -73,7 +80,11 @@ const UpdateForm = () => {
             required
           />
         </div>
-        <button type="submit" className="btn btn-info submit-update-restaurant">
+        <button
+          type="submit"
+          className="btn btn-info submit-update-restaurant"
+          onClick={handleSubmit}
+        >
           Submit
         </button>
       </form>
