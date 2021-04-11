@@ -61,7 +61,8 @@ const RestaurantList = (props) => {
   };
 
   const handleSelectRestaurant = (id) => {
-    console.log("restaurant selected");
+    // use history object to route to /restaurants/:id
+    history.push(`/restaurants/${id}`);
   };
 
   return (
