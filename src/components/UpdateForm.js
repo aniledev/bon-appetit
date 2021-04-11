@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { Context } from "../context";
 import RestaurantRequest from "../axios/RestaurantRequest";
 
@@ -7,8 +7,13 @@ const UpdateForm = () => {
   // use params in order to route the page to the update form for a specific restaurant
   const { id } = useParams();
   //   console.log(id);
+
+  // use the history object to create rerouting
+  let history = useHistory();
+
   // use context to set the placeholder value of the individual restaurant we are updatin
   useContext(Context);
+
   // create controlled form component using state
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
@@ -45,9 +50,7 @@ const UpdateForm = () => {
         location,
         price_range: priceRange,
       });
-      console.log(response.data.data.restaurant);
-
-      //   addRestaurant(response.data.data.restaurant);
+      history.push("/restaurants");
     } catch (error) {
       console.log(error);
     }
