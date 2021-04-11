@@ -17,6 +17,8 @@ const AddRestaurantForm = () => {
               className="form-control"
               placeholder="Name"
               id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="col">
@@ -28,13 +30,20 @@ const AddRestaurantForm = () => {
               id="location"
               className="form-control"
               placeholder="Location"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
             />
           </div>
           <div className="col">
             <label htmlFor="price-range" className="sr-only">
               Price Range
             </label>
-            <select id="price-range" className="custom-select my-1 mr-sm-2">
+            <select
+              id="price-range"
+              className="custom-select my-1 mr-sm-2"
+              value={priceRange}
+              onChange={(e) => setPriceRange(e.target.value)}
+            >
               <option disabled>Price Range</option>
               <option value="1">$</option>
               <option value="3">$$</option>
@@ -51,3 +60,5 @@ const AddRestaurantForm = () => {
     </div>
   );
 };
+
+export default AddRestaurantForm;
