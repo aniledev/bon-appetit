@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import RestaurantDetailRoute from "./routes/RestaurantDetailRoute";
 import HomeRoute from "./routes/HomeRoute";
 import LandingRoute from "./routes/LandingRoute";
