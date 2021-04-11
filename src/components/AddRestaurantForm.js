@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 const AddRestaurantForm = () => {
+  const [name, setName] = useState("");
+  const [location, setLocation] = useState("");
+  const [priceRange, setPriceRange] = useState("Price Range");
   return (
     <div className="AddRestaurantForm mb-4">
       <form className="add-restaurant-form mt-5">
