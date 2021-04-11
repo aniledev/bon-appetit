@@ -8,9 +8,9 @@ const Rating = () => {
   const starRating = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= rating) {
-      starRating.push(<i class="fas fa-star"></i>);
+      starRating.push(<i className="fas fa-star"></i>);
     } else {
-      starRating.push(<i class="far fa-star"></i>);
+      starRating.push(<i className="far fa-star"></i>);
     }
   }
   return <div className="Rating">{starRating}</div>;
