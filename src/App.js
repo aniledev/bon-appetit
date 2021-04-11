@@ -15,7 +15,7 @@ function App() {
       <div className="App container">
         <Switch>
           <Route exact path={"/"} component={LandingRoute} />
-          <Route exact path={"/home"} component={HomeRoute} />
+          <Route exact path={"/restaurants"} component={HomeRoute} />
           <Route
             exact
             path={"/restaurants/:id"}
