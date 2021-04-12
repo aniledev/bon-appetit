@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import HomeHeader from "../components/HomeHeader";
 import AddRestaurantForm from "../components/AddRestaurantForm";
 import RestaurantList from "../components/RestaurantList";
+import "../styles/ListRoute.css";
 import "../styles/AddRestaurantForm.css";
 
 export default class ListRoute extends Component {

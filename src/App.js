@@ -5,7 +5,7 @@ import ListRoute from "./routes/ListRoute";
 import LandingRoute from "./routes/LandingRoute";
 import UpdateRoute from "./routes/UpdateRoute";
 import NotFoundRoute from "./routes/NotFoundRoute";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { ContextProvider } from "./context";
 
 // make sure to wrap App in context so that it can consume the context object
