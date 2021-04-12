@@ -106,10 +106,10 @@ svg:not(:root).svg-inline--fa {
 .card-text:last-child {
   margin-bottom: 0;
 }
-
+/* 
 .col-4 {
   margin-left: 15px;
-}
+} */
 
 p {
   margin-top: 0;

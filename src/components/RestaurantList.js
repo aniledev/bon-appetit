@@ -55,11 +55,13 @@ const RestaurantList = (props) => {
   };
 
   return (
-    <div className="RestaurantList list-group">
-      <table className="table table-hover table-light">
+    <div className="RestaurantList list-group container">
+      <table className="container table table-hover table-light">
         <thead>
           <tr className="bg-light">
-            <th scope="col">Restaurant</th>
+            <th className="restaurant-row" scope="col">
+              Restaurant
+            </th>
             <th scope="col">Location</th>
             <th scope="col">Price Range</th>
             <th scope="col">Rating</th>
