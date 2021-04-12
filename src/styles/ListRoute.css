@@ -239,7 +239,6 @@ th {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #212529;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -254,21 +253,21 @@ th {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.btn-warning {
-  color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
-}
-
-.btn-danger {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
-}
-
 @media (min-width: 576px) {
   .mr-sm-2,
   .mx-sm-2 {
     margin-right: 0.5rem !important;
   }
+}
+
+.btn-warning {
+  color: #212529;
+  background-color: #ffc107 !important ;
+  border-color: #ffc107;
+}
+
+.btn-danger {
+  color: #fff !important;
+  background-color: #dc3545 !important;
+  border-color: #dc3545;
 }
