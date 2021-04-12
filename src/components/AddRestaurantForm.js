@@ -32,9 +32,7 @@ const AddRestaurantForm = () => {
       <form className="add-restaurant-form mt-5">
         <div className="form-row">
           <div className="col">
-            <label htmlFor="name" className="sr-only">
-              Name
-            </label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               className="form-control"
@@ -46,9 +44,7 @@ const AddRestaurantForm = () => {
             />
           </div>
           <div className="col">
-            <label htmlFor="location" className="sr-only">
-              Location
-            </label>
+            <label htmlFor="location">Location</label>
             <input
               type="text"
               id="location"
@@ -60,9 +56,7 @@ const AddRestaurantForm = () => {
             />
           </div>
           <div className="col">
-            <label htmlFor="price-range" className="sr-only">
-              Price Range
-            </label>
+            <label htmlFor="price-range">Price Range</label>
             <select
               id="price-range"
               className="custom-select my-1 mr-sm-2"
