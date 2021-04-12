@@ -6,7 +6,6 @@ import RestaurantRequest from "../axios/RestaurantRequest";
 const UpdateForm = () => {
   // use params in order to route the page to the update form for a specific restaurant
   const { id } = useParams();
-  //   console.log(id);
 
   // use the history object to create rerouting
   let history = useHistory();
@@ -25,13 +24,13 @@ const UpdateForm = () => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get(`/restaurant/${id}`);
-        // console.log(response.data.data);
         // use the response data to update the state, which in turn can update the placeholder text
         setName(response.data.data.restaurant.name);
         setLocation(response.data.data.restaurant.location);
         setPriceRange(response.data.data.restaurant.price_range);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        throw error;
       }
     };
     fetchData();
@@ -40,7 +39,6 @@ const UpdateForm = () => {
   const handleSubmit = async (e) => {
     // prevent the default action
     e.preventDefault();
-    // console.log("update butto clicked");
     // wrap code in try catch block
     // make PUT request to the server using the data that is entered into the form
     // /api/restaurant/:id
@@ -52,7 +50,8 @@ const UpdateForm = () => {
       });
       history.push("/restaurants");
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      throw error;
     }
   };
 

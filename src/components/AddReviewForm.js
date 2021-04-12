@@ -7,15 +7,12 @@ export const AddReviewForm = () => {
   const history = useHistory();
   const location = useLocation();
   const { id } = useParams();
-  console.log(id);
-
   const [name, setName] = useState("");
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("Rating");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("form submitted");
     // make request to teh endpoint api/restaurant/:id/review
     try {
       await RestaurantRequest.post(`/restaurant/${id}/review`, {
@@ -25,9 +22,9 @@ export const AddReviewForm = () => {
       });
       history.push("/");
       history.push(location.pathname);
-      // console.log(response.data.data.review);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      throw error;
     }
   };
 

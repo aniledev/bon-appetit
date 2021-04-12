@@ -20,10 +20,10 @@ const RestaurantInfo = () => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get(`/restaurant/${id}`);
-        console.log(response.data.data);
         setSelectedRestaurant(response.data.data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        throw error;
       }
     };
     fetchData();

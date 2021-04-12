@@ -17,10 +17,10 @@ const RestaurantList = (props) => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get("/restaurant");
-        // console.log(response);
         setRestaurants(response.data.data.restaurants);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
+        throw error;
       }
     };
     fetchData();
@@ -31,7 +31,6 @@ const RestaurantList = (props) => {
     // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
     try {
       await RestaurantRequest.delete(`/restaurant/${id}`);
-      // console.log(response);
       // instead of spread operator use filter method to update the restaurant state with the id of the one that was deleted
       setRestaurants(
         restaurants.filter((restaurant) => {
@@ -39,7 +38,8 @@ const RestaurantList = (props) => {
         })
       );
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      throw error;
     }
   };
 
@@ -47,19 +47,6 @@ const RestaurantList = (props) => {
     e.stopPropagation();
     // reroute to restaurants/id/update page using history object
     history.push(`/restaurants/${id}/update`);
-    // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
-    // try {
-    //   await RestaurantRequest.delete(`/restaurant/${id}`);
-    //   // console.log(response);
-    //   // instead of spread operator use filter method to update the restaurant state with the id of the one that was deleted
-    //   setRestaurants(
-    //     restaurants.filter((restaurant) => {
-    //       return restaurant.id !== id;
-    //     })
-    //   );
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
 
   const handleSelectRestaurant = (id) => {

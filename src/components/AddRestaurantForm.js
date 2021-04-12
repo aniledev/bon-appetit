@@ -10,7 +10,6 @@ const AddRestaurantForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log("clicked");
     // prevent default action of form submission
     // create try catch block for handling request to /restaurant
     // in the POST body send data stored in state
@@ -22,9 +21,9 @@ const AddRestaurantForm = () => {
         price_range: priceRange,
       });
       addRestaurant(response.data.data.restaurant);
-      // console.log(response);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
+      throw error;
     }
   };
 
