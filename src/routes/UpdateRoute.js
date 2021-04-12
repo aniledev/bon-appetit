@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/UpdateRoute.css";
 import UpdateForm from "../components/UpdateForm";
 
 export default class UpdateRoute extends Component {
