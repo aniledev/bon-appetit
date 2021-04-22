@@ -65,7 +65,7 @@ This full stack pet adoption application relies on :
 - User can share the books through social media
 
 ## Deployment
-https://bon-appetit-theta.vercel.app/
+[Deployed with Vercel](https://bon-appetit-theta.vercel.app/)
 
 ## Getting Started with Create React App
 
