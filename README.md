@@ -26,7 +26,7 @@
 
 ## About This Project
 
-This full stack restaurant tracker and review application has a custom built RESTful API using Express and allows for CRUD actions. It is powered by relational databases using PostgreSQL.
+This full-stack restaurant tracker and review application has a custom-built RESTful API using Express and allows for CRUD actions. It is powered by relational databases using PostgreSQL.
 
 ![Bon Appetit Image 1](https://github.com/aniledev/bon-appetit/blob/master/images/landing.png?raw=true)
 
@@ -97,9 +97,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point, you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 <!-- ACKNOWLEDGEMENTS -->
 
@@ -129,4 +129,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 <p align="left">
 <a href="https://linkedin.com/in/elina-mcgill" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="elina-mcgill" height="30" width="40" /></a>
-</p>
+</p
