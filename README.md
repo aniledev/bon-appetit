@@ -58,8 +58,8 @@ This full-stack restaurant tracker and review application has a custom-built RES
 - User can share the books through social media
 
 ## Deployment
-- [Client deployed with Vercel](https://bon-appetit-theta.vercel.app/)
-- [Server deployed with Heroku](https://protected-ridge-35280.herokuapp.com/api)
+- Client deployed with [Vercel](https://bon-appetit-theta.vercel.app/)
+- Server deployed with [Heroku](https://protected-ridge-35280.herokuapp.com/api)
 - You can view the source code for the server and database at this [repo](https://github.com/aniledev/bon-appetit-server).
 
 ## Getting Started with Create React App
