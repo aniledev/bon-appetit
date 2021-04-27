@@ -1,7 +1,5 @@
 # Bon Appetit
 
-<!-- TABLE OF CONTENTS -->
-
 ## Contents
 
 <details open="open">
@@ -18,7 +16,7 @@
 
 ## Deployment
 
-https://bon-appetit-theta.vercel.app/
+Client deployed with [Vercel](https://bon-appetit-theta.vercel.app/).
 
 ## About This Project
 
