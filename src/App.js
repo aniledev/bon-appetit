@@ -8,7 +8,6 @@ import NotFoundRoute from "./routes/NotFoundRoute";
 // import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { ContextProvider } from "./context";
 
-// make sure to wrap App in context so that it can consume the context object
 function App() {
   return (
     <ContextProvider>

@@ -3,13 +3,9 @@ import { useHistory } from "react-router-dom";
 import RestaurantRequest from "../axios/RestaurantRequest";
 import { Context } from "../context";
 
-// useEffeect doesnt wok with class components refractor into function component first
-
 const RestaurantList = (props) => {
-  // save the response from the fetch Data function to context
   const { restaurants, setRestaurants } = useContext(Context);
 
-  // use the history object to create rerouting
   let history = useHistory();
 
   // use effect runs when the component mounts
@@ -19,7 +15,6 @@ const RestaurantList = (props) => {
         const response = await RestaurantRequest.get("/restaurant");
         setRestaurants(response.data.data.restaurants);
       } catch (error) {
-        // console.log(error);
         throw error;
       }
     };
@@ -28,29 +23,24 @@ const RestaurantList = (props) => {
 
   const handleDelete = async (e, id) => {
     e.stopPropagation();
-    // wrap code in a try catch block because this is going to send to DELETE /api/restaurants/:id
     try {
       await RestaurantRequest.delete(`/restaurant/${id}`);
-      // instead of spread operator use filter method to update the restaurant state with the id of the one that was deleted
       setRestaurants(
         restaurants.filter((restaurant) => {
           return restaurant.id !== id;
         })
       );
     } catch (error) {
-      // console.log(error);
       throw error;
     }
   };
 
   const handleUpdate = async (e, id) => {
     e.stopPropagation();
-    // reroute to restaurants/id/update page using history object
     history.push(`/restaurants/${id}/update`);
   };
 
   const handleSelectRestaurant = (id) => {
-    // use history object to route to /restaurants/:id
     history.push(`/restaurants/${id}`);
   };
 
@@ -100,55 +90,6 @@ const RestaurantList = (props) => {
                 </tr>
               );
             })}
-
-          {/* <tr>
-            <td>Mellow Mushroom</td>
-            <td>Winter Park</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning update-button">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-info delete-button">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Mellow Mushroom</td>
-            <td>Winter Park</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning update-button">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-info delete-button">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Mellow Mushroom</td>
-            <td>Winter Park</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning update-button">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-info delete-button">Delete</button>
-            </td>
-          </tr>
-          <tr>
-            <td>Mellow Mushroom</td>
-            <td>Winter Park</td>
-            <td>$$</td>
-            <td>Rating</td>
-            <td>
-              <button className="btn btn-warning update-button">Update</button>
-            </td>
-            <td>
-              <button className="btn btn-info delete-button">Delete</button>
-            </td>
-          </tr> */}
         </tbody>
       </table>
     </div>

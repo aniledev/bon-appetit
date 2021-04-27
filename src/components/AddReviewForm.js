@@ -13,7 +13,6 @@ export const AddReviewForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // make request to teh endpoint api/restaurant/:id/review
     try {
       await RestaurantRequest.post(`/restaurant/${id}/review`, {
         name,
@@ -23,7 +22,6 @@ export const AddReviewForm = () => {
       history.push("/");
       history.push(location.pathname);
     } catch (error) {
-      // console.log(error);
       throw error;
     }
   };

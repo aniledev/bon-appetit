@@ -10,7 +10,6 @@ export const ContextProvider = (props) => {
   };
   return (
     // the context provider needs to hold the value of restaurants from the api
-    // setRestaurants is a function that updates the state with the restaurant response data
     <Context.Provider
       value={{
         restaurants,
@@ -24,10 +23,3 @@ export const ContextProvider = (props) => {
     </Context.Provider>
   );
 };
-// don't forget to wrap the App component in the context so that it can consume the context values
-
-// // use createContext to initialize context for use in application
-
-// export default React.createContext({
-//   // empty update functions
-// });

@@ -10,9 +10,6 @@ const AddRestaurantForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // prevent default action of form submission
-    // create try catch block for handling request to /restaurant
-    // in the POST body send data stored in state
 
     try {
       const response = await RestaurantRequest.post("/restaurant", {
@@ -22,7 +19,6 @@ const AddRestaurantForm = () => {
       });
       addRestaurant(response.data.data.restaurant);
     } catch (error) {
-      // console.log(error);
       throw error;
     }
   };

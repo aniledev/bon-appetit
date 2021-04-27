@@ -7,10 +7,8 @@ const UpdateForm = () => {
   // use params in order to route the page to the update form for a specific restaurant
   const { id } = useParams();
 
-  // use the history object to create rerouting
   let history = useHistory();
 
-  // use context to set the placeholder value of the individual restaurant we are updatin
   useContext(Context);
 
   // create controlled form component using state
@@ -18,18 +16,14 @@ const UpdateForm = () => {
   const [location, setLocation] = useState("");
   const [priceRange, setPriceRange] = useState("");
 
-  // fetch data again on the update form so that we can use the values to change placeholder text
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await RestaurantRequest.get(`/restaurant/${id}`);
-        // use the response data to update the state, which in turn can update the placeholder text
         setName(response.data.data.restaurant.name);
         setLocation(response.data.data.restaurant.location);
         setPriceRange(response.data.data.restaurant.price_range);
       } catch (error) {
-        // console.log(error);
         throw error;
       }
     };
@@ -37,11 +31,7 @@ const UpdateForm = () => {
   }, [id]);
 
   const handleSubmit = async (e) => {
-    // prevent the default action
     e.preventDefault();
-    // wrap code in try catch block
-    // make PUT request to the server using the data that is entered into the form
-    // /api/restaurant/:id
     try {
       await RestaurantRequest.put(`/restaurant/${id}`, {
         name,
@@ -50,7 +40,6 @@ const UpdateForm = () => {
       });
       history.push("/restaurants");
     } catch (error) {
-      // console.log(error);
       throw error;
     }
   };
