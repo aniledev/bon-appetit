@@ -1,12 +1,12 @@
-<h1 align="center">Bon Appetit</h1>
-<h3 align="center">A full-stack restaurant tracker application</h3>
+  <h1 align="center">Bon Appetit</h1>
+  <h3 align="center">A full-stack restaurant tracker application</h3>
 
-<p align="center">
-<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/aniledev/bon-appetit">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/aniledev/bon-appetit">
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/aniledev/bon-appetit">
-<img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/aniledev/bon-appetit">
-</p>
+  <p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/aniledev/bon-appetit">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/aniledev/bon-appetit">
+  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/aniledev/bon-appetit">
+  <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/aniledev/bon-appetit">
+  </p>
 
 ## Contents
 
@@ -53,9 +53,7 @@ This full-stack restaurant tracker and review application has a custom-built RES
 
 ## Upcoming Features
 
-- User can create multiple lists
-- User can leave comments and reviews based on a book
-- User can share the books through social media
+For a list of upcoming features and bug fixes that are good for beginner developers looking to contribute, check the Issues tab of this repo.
 
 ## Deployment
 
@@ -104,13 +102,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
 
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Font Awesome](https://fontawesome.com)
-- [Jest](https://jestjs.io/)
 - [Thinkful Coding Bootcamp](https://www.thinkful.com/)
 
 ## Connect With Me
