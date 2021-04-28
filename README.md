@@ -53,7 +53,7 @@ This full-stack restaurant tracker and review application has a custom-built RES
 
 ## Upcoming Features
 
-For a list of upcoming features and bug fixes that are good for beginner developers looking to contribute, check the Issues tab of this repo.
+For a list of upcoming features and bug fixes that are good for beginner developers looking to contribute, check the [Issues](https://github.com/aniledev/bon-appetit/issues) tab of this repo.
 
 ## Deployment
 
