@@ -6,7 +6,7 @@
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/aniledev/bon-appetit">
   <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/aniledev/bon-appetit">
   <img alt="GitHub repo size in bytes" src="https://img.shields.io/github/repo-size/aniledev/bon-appetit">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues/aniledev/bon-appetitr?color=red">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/aniledev/bon-appetit?color=red">
 <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/aniledev/bon-appetit?color=blueviolet">
   </p>
 
